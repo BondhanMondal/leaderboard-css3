@@ -81,10 +81,20 @@ Top blogs styles
 /* -----------------------
 Latest Course styles 
 ----------------------- */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
 
 .course .course-banner img {
     width: 224px;
     height: 104px;
+}
+.course-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .fa-star{
     font-size: 12px;
@@ -95,3 +105,53 @@ Latest Course styles
 .fa-star.empty{
     color: #AEAEAE;
 }
+.course-duration{
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+.fa-clock.red{
+    color: #FF4A60;
+    font-size: 17px;
+}
+.course-duration span{
+    color: #FF4A60;
+}
+
+/* -----------------------
+Media Queries 
+----------------------- */
+
+/* -----------------------
+Mobile Devices
+----------------------- */
+
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    
+    
+}
+/* -----------------------
+Mobile Devices
+----------------------- */
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+        .players, .courses{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+}
+
+
+
